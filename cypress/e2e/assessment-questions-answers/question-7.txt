@@ -1,0 +1,38 @@
+Question 7:
+Answer the following in your own words.
+a) How do you install Cypress and set up your first test?
+    -   1. need to create new folder for the project
+        2. install cypress by run [npm init -y] in the New Terminal
+        3. after file package.json installed, run [npm install cypress] on the Terminal
+        4. in order to run the cypress, run [npx cypress open] in the Terminal using Command Prompt
+
+b) How do you handle authentication and authorization in Cypress tests?
+    -   a lot of way can do such as, call the element of the input credential and .type the credentials but this
+        are not recommended to every script. Other than that, stored the authentication credential in the fixtures 
+        so that the credential are not open to others users. It also easy to maintain because when it is in the fixtures,
+        we can change the credential in that fixtures file only instead of change every credential in the every test script file.
+
+c) What is the role of the Cypress Test Runner and what features does it offer?
+    -   can run test in real-time
+    -   can see the step of execution
+    -   easy to track the elements of User Interface
+    -   eady to track the error since it provide the stack trace of the CypressError and even suggested the other way to fix the error
+    -   provide screenshots and video for headless run
+
+d) How do you integrate Cypress into a Continuous Integration (CI) pipeline?
+    -   integrate Cypress with Github
+    -   1. create the project and repository in Github
+        2. clone the repository into a GitHub Desktop
+        3. open the repository by using Visual Studio Code
+        4. publish the branch and can start install cypress and scripting
+
+e) How do you handle dynamic data and input fields in Cypress tests?
+    -   can generate random data using faker.js library or for example set date as today's day
+    -   use cy.wait(), .should(), or .then() to wait for dynamic elements
+    -   use the data attributes if the id or name of the element can be changed
+
+f) How do you add dependency to Cypress?
+    -    using npm install <dependency-name> --save-dev
+            for example [npm install @faker-js/faker --save-dev]
+            then import { faker } from '@faker-js/faker' in my script
+
